@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-5">Bienvenido al YussChat</h2>
+      <div class="text-center mb-5 text-dark">Únete a una sala para chatear</div>
+      <div class="card my-5">
+
+        <form [formGroup]="joinRoomForm" class="card-body cardbody-color p-lg-5">
+
+          <div class="text-center">
+            <img src="../../assets/9c247153-567c-41f6-8cd0-7e7da3bca439.png"
+              class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" formControlName="user" class="form-control" id="displayname" aria-describedby="emailHelp" placeholder="Nombre de Usuario">
+        </div>
+        <div class="mb-3">
+            <input type="text" formControlName="room" class="form-control" id="roomName"  placeholder="Nombre de Sala">
+
+        </div>
+        <div class="text-center">
+          <button [disabled]="joinRoomForm.invalid"  (click)="joinRoom()"type="submit" class="btn btn-color px-5 mb-5 w-100">Unirse</button>
+        </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
